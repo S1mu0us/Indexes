@@ -24,10 +24,8 @@
 
 ### Задание 1
 
-```
-SELECT 
-ROUND(SUM(index_length) / SUM(data_length + index_length) * 100, 2)
-AS index_percent
+```sql
+SELECT ROUND(SUM(index_length) / SUM(data_length + index_length) * 100, 2) AS index_percent
 FROM information_schema.TABLES 
 WHERE table_schema = 'sakila';
 ```
@@ -38,25 +36,17 @@ WHERE table_schema = 'sakila';
 
 ### Задание 2
 
-`Приведите ответ в свободной форме........`
 
-1. `Заполните здесь этапы выполнения, если требуется ....`
-2. `Заполните здесь этапы выполнения, если требуется ....`
-3. `Заполните здесь этапы выполнения, если требуется ....`
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
-6. 
+1. В `date(p.payment_date) = '2005-07-30'` нельзя использовать индексы
+2. В WHERE не используется `film f`
+3. `distinct` необязателен
 
+```sql
+CREATE INDEX idx_payment_date ON payment(payment_date);
+
+SELECT DISTINCT CONCAT(c.last_name, ' ', c.first_name), SUM(p.amount) OVER (partition by c.customer_id, f.title)
+FROM payment p, rental r, customer c, inventory i, film f
+WHERE p.payment_date >= '2005-07-30 00:00:00' AND p.payment_date < '2005-07-31 00:00:00' AND p.payment_date = r.rental_date AND r.customer_id = c.customer_id AND i.inventory_id = r.inventory_id;
 ```
-Поле для вставки кода...
-....
-....
-....
-....
-```
-
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота 2](ссылка на скриншот 2)`
-
 
 ---
