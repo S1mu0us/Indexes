@@ -25,11 +25,11 @@
 ### Задание 1
 
 ```
->SELECT 
->ROUND(SUM(index_length) / SUM(data_length + index_length) * 100, 2)
->AS index_percent
->FROM information_schema.TABLES 
->WHERE table_schema = 'sakila';
+SELECT 
+ROUND(SUM(index_length) / SUM(data_length + index_length) * 100, 2)
+AS index_percent
+FROM information_schema.TABLES 
+WHERE table_schema = 'sakila';
 ```
 
 <img src = "img/image1.png">
