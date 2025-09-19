@@ -1,4 +1,4 @@
-<img width="142" height="79" alt="image" src="https://github.com/user-attachments/assets/a5dacfa1-b65d-40a7-90c9-fe1ea3e3c4d2" /><img width="142" height="79" alt="image" src="https://github.com/user-attachments/assets/44e5ade0-5a8a-460d-9479-42d4e8fc8d1b" /><img width="142" height="79" alt="image" src="https://github.com/user-attachments/assets/a2b8b666-60ba-44c5-89cf-7ce89b3015d6" /># Домашнее задание к занятию "`Индексы`" - `Янин Семён Васильевич`
+"Домашнее задание к занятию "`Индексы`" - `Янин Семён Васильевич`
 
 
 ### Инструкция по выполнению домашнего задания
